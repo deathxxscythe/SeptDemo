@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Jokes View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="jokesVC" id="Y6W-OH-hqX" customClass="JokesViewController" customModule="week03assessment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="setup:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztw-Kb-DjG">
+                                <rect key="frame" x="20" y="64" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4w-z6-qao">
+                                <rect key="frame" x="78" y="64" width="316" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="Delivery:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAa-pE-5Uz">
+                                <rect key="frame" x="20" y="115" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMa-JA-HEk">
+                                <rect key="frame" x="97" y="114.5" width="297" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="G4w-z6-qao" secondAttribute="trailing" constant="20" id="HzF-Ws-wG8"/>
+                            <constraint firstItem="FAa-pE-5Uz" firstAttribute="top" secondItem="Ztw-Kb-DjG" secondAttribute="bottom" constant="30" id="Lkw-pT-u8O"/>
+                            <constraint firstItem="Ztw-Kb-DjG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="Oqn-Ee-Wty"/>
+                            <constraint firstItem="Ztw-Kb-DjG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="UUC-Xl-03p"/>
+                            <constraint firstItem="QMa-JA-HEk" firstAttribute="leading" secondItem="FAa-pE-5Uz" secondAttribute="trailing" constant="10" id="Uav-qf-kbA"/>
+                            <constraint firstItem="QMa-JA-HEk" firstAttribute="top" secondItem="G4w-z6-qao" secondAttribute="bottom" constant="30" id="cmO-rs-773"/>
+                            <constraint firstItem="QMa-JA-HEk" firstAttribute="leading" secondItem="FAa-pE-5Uz" secondAttribute="trailing" constant="10" id="ipY-Uw-xD8"/>
+                            <constraint firstItem="FAa-pE-5Uz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="iyZ-Iu-o9E"/>
+                            <constraint firstItem="G4w-z6-qao" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="mYX-tu-bhf"/>
+                            <constraint firstItem="G4w-z6-qao" firstAttribute="leading" secondItem="Ztw-Kb-DjG" secondAttribute="trailing" constant="10" id="sXj-uS-SVT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QMa-JA-HEk" secondAttribute="trailing" constant="20" id="tUE-p5-vzg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="deliveryLabel" destination="QMa-JA-HEk" id="yoc-F3-TMq"/>
+                        <outlet property="setupLabel" destination="G4w-z6-qao" id="whj-Mx-r8j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
