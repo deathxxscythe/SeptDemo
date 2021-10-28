@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="queryStrings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4x4-Fy-ePI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="dfh-xX-Z7D"/>
+                                </constraints>
+                            </pickerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9DJ-vT-3aq">
+                                <rect key="frame" x="0.0" y="268" width="414" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Bmu-WE-5Qr"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                    <segment title="Fourth"/>
+                                </segments>
+                            </segmentedControl>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="xbT-3c-x4a">
+                                <rect key="frame" x="0.0" y="299" width="327" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9JQ-D3-15H"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jnh-ls-xjf">
+                                <rect key="frame" x="0.0" y="343" width="414" height="519"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce3-DB-NPJ">
+                                <rect key="frame" x="337" y="304" width="69" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="7NL-KV-m9t"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Search"/>
+                                <connections>
+                                    <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2zm-sY-bPZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ce3-DB-NPJ" firstAttribute="leading" secondItem="xbT-3c-x4a" secondAttribute="trailing" constant="10" id="2LH-pG-u9x"/>
+                            <constraint firstItem="4x4-Fy-ePI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Oc-ZC-Lmf"/>
+                            <constraint firstItem="Jnh-ls-xjf" firstAttribute="top" secondItem="xbT-3c-x4a" secondAttribute="bottom" id="6Jx-G4-LZS"/>
+                            <constraint firstItem="9DJ-vT-3aq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7t7-j0-Tqo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jnh-ls-xjf" secondAttribute="trailing" id="9NB-cH-LDQ"/>
+                            <constraint firstItem="ce3-DB-NPJ" firstAttribute="top" secondItem="9DJ-vT-3aq" secondAttribute="bottom" constant="5" id="Bw6-em-fyr"/>
+                            <constraint firstItem="Jnh-ls-xjf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H9b-cP-Zd4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jnh-ls-xjf" secondAttribute="bottom" id="JYR-7s-qDW"/>
+                            <constraint firstItem="9DJ-vT-3aq" firstAttribute="top" secondItem="4x4-Fy-ePI" secondAttribute="bottom" constant="8" id="PSq-IA-hPG"/>
+                            <constraint firstItem="4x4-Fy-ePI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ri6-MH-fP7"/>
+                            <constraint firstItem="4x4-Fy-ePI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="o9q-x0-rgZ"/>
+                            <constraint firstItem="9DJ-vT-3aq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qtb-Gd-RLY"/>
+                            <constraint firstItem="xbT-3c-x4a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s5H-Na-kyR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ce3-DB-NPJ" secondAttribute="trailing" constant="8" id="upQ-Fe-P2B"/>
+                            <constraint firstItem="ce3-DB-NPJ" firstAttribute="leading" secondItem="xbT-3c-x4a" secondAttribute="trailing" constant="10" id="vFI-L9-M8V"/>
+                            <constraint firstItem="xbT-3c-x4a" firstAttribute="top" secondItem="9DJ-vT-3aq" secondAttribute="bottom" id="wtS-c4-hUf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="4x4-Fy-ePI" id="Ax3-t4-AK1"/>
+                        <outlet property="searchBar" destination="xbT-3c-x4a" id="mEB-pZ-Rwf"/>
+                        <outlet property="segmentedControll" destination="9DJ-vT-3aq" id="7FG-yl-ahn"/>
+                        <outlet property="tableView" destination="Jnh-ls-xjf" id="n0X-aP-pzD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
