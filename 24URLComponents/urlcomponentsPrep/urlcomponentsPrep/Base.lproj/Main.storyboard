@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="urlcomponentsPrep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Geb-TM-o9E">
+                                <rect key="frame" x="0.0" y="260" width="414" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                    <segment title="Fourth"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCu-PD-ko0">
+                                <rect key="frame" x="342" y="291" width="62" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PRk-CZ-APn"/>
+                                </connections>
+                            </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ydq-K9-KEY">
+                                <rect key="frame" x="0.0" y="291" width="332" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8K6-5R-70K">
+                                <rect key="frame" x="0.0" y="342" width="414" height="520"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHJ-M3-z11">
+                                <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SCu-PD-ko0" firstAttribute="leading" secondItem="ydq-K9-KEY" secondAttribute="trailing" constant="10" id="1V1-d5-l3L"/>
+                            <constraint firstItem="SCu-PD-ko0" firstAttribute="bottom" secondItem="ydq-K9-KEY" secondAttribute="bottom" id="2Dg-zC-s5f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Geb-TM-o9E" secondAttribute="trailing" id="32p-jL-Jkn"/>
+                            <constraint firstItem="8K6-5R-70K" firstAttribute="top" secondItem="ydq-K9-KEY" secondAttribute="bottom" id="3Fw-gl-yV0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8K6-5R-70K" secondAttribute="trailing" id="4jc-sc-atH"/>
+                            <constraint firstItem="fHJ-M3-z11" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6lA-yB-7e0"/>
+                            <constraint firstItem="fHJ-M3-z11" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6sg-fu-CsH"/>
+                            <constraint firstItem="fHJ-M3-z11" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AYZ-qN-gLa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SCu-PD-ko0" secondAttribute="trailing" constant="10" id="MP9-FF-2JV"/>
+                            <constraint firstItem="Geb-TM-o9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MxR-dF-aIv"/>
+                            <constraint firstItem="ydq-K9-KEY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O0J-dT-KOI"/>
+                            <constraint firstItem="ydq-K9-KEY" firstAttribute="top" secondItem="Geb-TM-o9E" secondAttribute="bottom" id="Os3-M7-e0F"/>
+                            <constraint firstItem="8K6-5R-70K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V14-gD-jdO"/>
+                            <constraint firstItem="SCu-PD-ko0" firstAttribute="top" secondItem="Geb-TM-o9E" secondAttribute="bottom" id="gQ3-TW-izy"/>
+                            <constraint firstItem="Geb-TM-o9E" firstAttribute="top" secondItem="fHJ-M3-z11" secondAttribute="bottom" id="hge-Uk-sN2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8K6-5R-70K" secondAttribute="bottom" id="iT0-f0-7Zv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="fHJ-M3-z11" id="7L7-dr-oXq"/>
+                        <outlet property="searchBar" destination="ydq-K9-KEY" id="3I8-BT-yZX"/>
+                        <outlet property="segmentedControll" destination="Geb-TM-o9E" id="Qeh-PE-dbu"/>
+                        <outlet property="tableView" destination="8K6-5R-70K" id="yDR-6I-aqp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.623188405797109" y="51.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
