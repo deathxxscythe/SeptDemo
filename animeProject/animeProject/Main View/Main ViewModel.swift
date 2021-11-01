@@ -8,19 +8,19 @@
 import Foundation
 
 class MainViewModel {
-    var updateShowData: ([Show]) -> Void = { _ in }
-    var updateCharacterData: ([Character]) -> Void = { _ in }
+    var updateShowData: (([Show]) -> Void)?
+    var updateCharacterData: (([Character]) -> Void)?
     
     var searchType: String?
     
     var showData: [Show]? {
         didSet{
-            updateShowData(showData!)
+            updateShowData?(showData!)
         }
     }
     var characterData: [Character]? {
         didSet{
-            updateCharacterData(characterData!)
+            updateCharacterData?(characterData!)
         }
     }
     

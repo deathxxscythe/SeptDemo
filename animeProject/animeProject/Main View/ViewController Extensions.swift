@@ -84,22 +84,7 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.viewModel.searchType = getQueryKey()
-        let search: String = searchBar.text!.replacingOccurrences(of: " ", with: "_")
-        
-        if viewModel.searchType == "anime" {
-            Networking().fetchShows(search: search){ data in
-                DispatchQueue.main.async {
-                    self.viewModel.showData = data
-                }
-            }
-        } else {
-            Networking().fetchCharacters(search: search) { data in
-                DispatchQueue.main.async {
-                    self.viewModel.characterData = data
-                }
-            }
-        }
-        
+        networkRequest()
     }
 }
 

@@ -30,6 +30,9 @@
                                     <segment title="Anime"/>
                                     <segment title="Character"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControllerAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="UP7-qY-ZZu"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

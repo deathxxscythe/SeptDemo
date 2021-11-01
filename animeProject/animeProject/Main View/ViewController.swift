@@ -9,6 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func segmentedControllerAction(_ sender: Any) {
+        self.viewModel.searchType = getQueryKey()
+        networkRequest()
+    }
     @IBOutlet weak var segmentedController: UISegmentedControl!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -52,6 +56,21 @@ class ViewController: UIViewController {
         }
         return queryKey
     }
+    func networkRequest() {
+        let search: String = searchBar.text!.replacingOccurrences(of: " ", with: "_")
+        
+        if viewModel.searchType == "anime" {
+            Networking().fetchShows(search: search){ data in
+                DispatchQueue.main.async {
+                    self.viewModel.showData = data
+                }
+            }
+        } else {
+            Networking().fetchCharacters(search: search) { data in
+                DispatchQueue.main.async {
+                    self.viewModel.characterData = data
+                }
+            }
+        }
+    }
 }
-
-
