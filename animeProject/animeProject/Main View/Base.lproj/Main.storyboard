@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="mainVC" id="BYZ-38-t0r" customClass="ViewController" customModule="animeProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="UYr-N8-aTw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UTa-fw-cEK">
+                                <rect key="frame" x="0.0" y="126" width="414" height="736"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sbH-Hg-L2j">
+                                <rect key="frame" x="0.0" y="95" width="414" height="32"/>
+                                <segments>
+                                    <segment title="Anime"/>
+                                    <segment title="Character"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UTa-fw-cEK" secondAttribute="bottom" id="0SN-u7-bXA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sbH-Hg-L2j" secondAttribute="trailing" id="3he-T0-raM"/>
+                            <constraint firstItem="UYr-N8-aTw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4q4-kF-NNj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UTa-fw-cEK" secondAttribute="trailing" id="AIs-1W-iM8"/>
+                            <constraint firstItem="sbH-Hg-L2j" firstAttribute="top" secondItem="UYr-N8-aTw" secondAttribute="bottom" id="Fr2-qI-k1P"/>
+                            <constraint firstItem="sbH-Hg-L2j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gm2-Pk-GMR"/>
+                            <constraint firstItem="UTa-fw-cEK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TLx-ew-88k"/>
+                            <constraint firstItem="UYr-N8-aTw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WWG-wA-CqC"/>
+                            <constraint firstItem="UYr-N8-aTw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bVk-M3-9xh"/>
+                            <constraint firstItem="UTa-fw-cEK" firstAttribute="top" secondItem="sbH-Hg-L2j" secondAttribute="bottom" id="eEl-wg-2Px"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="UYr-N8-aTw" id="LkA-sI-j3w"/>
+                        <outlet property="segmentedController" destination="sbH-Hg-L2j" id="7g9-sX-dPs"/>
+                        <outlet property="tableView" destination="UTa-fw-cEK" id="RWf-6w-Zu7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
